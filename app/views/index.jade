@@ -1,0 +1,11 @@
+mixin mainWindow(platform)
+  Window.container(platform=platform, title="Alloy Navigation Demo", onOpen="doOpen", onClose="doClose")
+    ListView(onItemclick="clickItem")
+      ListSection(dataCollection="member")
+        ListItem(title="{name}", itemId="{id}")/
+
+Alloy
+  Collection(src="member")/
+  NavigationWindow(platform="ios")
+    +mainWindow("ios")
+  +mainWindow("android")

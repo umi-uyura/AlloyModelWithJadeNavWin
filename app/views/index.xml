@@ -1,0 +1,20 @@
+
+<Alloy>
+  <Collection src="member"/>
+  <NavigationWindow platform="ios">
+    <Window platform="ios" title="Alloy Navigation Demo" onOpen="doOpen" onClose="doClose" class="container">
+      <ListView onItemclick="clickItem">
+        <ListSection dataCollection="member">
+          <ListItem title="{name}" itemId="{id}"/>
+        </ListSection>
+      </ListView>
+    </Window>
+  </NavigationWindow>
+  <Window platform="android" title="Alloy Navigation Demo" onOpen="doOpen" onClose="doClose" class="container">
+    <ListView onItemclick="clickItem">
+      <ListSection dataCollection="member">
+        <ListItem title="{name}" itemId="{id}"/>
+      </ListSection>
+    </ListView>
+  </Window>
+</Alloy>
